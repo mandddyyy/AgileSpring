@@ -8,13 +8,19 @@ import org.cvtc.shapes.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SphereTest {
+public class SphereTest extends Shape implements Renderer {
 	
-	Sphere sphere1 = new Sphere(1.0f);
-	
-	Sphere sphere2 = new Sphere(2.0f);
+	public SphereTest(Dialog messageBox, float radius) {
+		
+		super(messageBox);
+		
+	}
 
-	Sphere sphere3 = new Sphere(3.0f);
+	Sphere sphere1 = new Sphere(null, 1.0f);
+	
+	Sphere sphere2 = new Sphere(null, 2.0f);
+
+	Sphere sphere3 = new Sphere(null, 3.0f);
 
 
 	@Test
@@ -129,6 +135,24 @@ public class SphereTest {
 	public void radiusIsNotZero() {
 		
 		assertThat(sphere1.getRadius(), is(1.0f));
+		
+	}
+
+	@Override
+	public float surfaceArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float volume() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
 		
 	}
 	

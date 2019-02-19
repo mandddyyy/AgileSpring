@@ -8,8 +8,10 @@ import java.util.Scanner;
 public class ShapeTest {
 
     public static void main(String[] args) {
+    	
+    	Dialog messageBox = new MessageBox();
 
-        // setting variables for cuboid, cylinder, and sphere calculations
+        // setting variables for cube, cylinder, and sphere calculations
         float cuboidWidth;
         
         float cuboidHeight;
@@ -105,12 +107,12 @@ public class ShapeTest {
 
         //Creating new shape objects with user input as dimensions
         
-        Shape cuboid = new Cuboid(cuboidWidth, cuboidHeight, cuboidDepth);
+        Shape cuboid = new Cuboid(messageBox, cuboidWidth, cuboidHeight, cuboidDepth);
         
-        Shape cylinder = new Cylinder(cylinderRadius, cylinderHeight);
+        Shape cylinder = new Cylinder(messageBox,cylinderRadius, cylinderHeight);
         
-        Shape sphere = new Sphere(sphereRadius);
-
+        Shape sphere = new Sphere(messageBox, sphereRadius);
+                
         //Render object message boxes
         
         cuboid.render();

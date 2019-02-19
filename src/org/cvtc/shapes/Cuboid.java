@@ -1,34 +1,33 @@
 //inside package org.cvtc.shapes
 package org.cvtc.shapes;
 
-//imports scanner
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
-//cuboid is a public class extending shape
-public class Cuboid extends Shape{
+//cube is a public class extending shape
+public class Cuboid extends Shape implements Renderer {
 
-    //cuboid properties as private float
+    //cube properties as private float
     private float width;
     private float height;
     private float depth;
 
     //constructor
-    public Cuboid(){
+    //public Cuboid(){
     	
-        this.width = 0.0f;
+        //this.width = 0.0f;
         
-        this.height = 0.0f;
+        //this.height = 0.0f;
         
-        this.depth = 0.0f;
+        //this.depth = 0.0f;
         
-    }
+    //}
 
     //overload constructor
-    public Cuboid(float width, float height, float depth) {
+    public Cuboid(Dialog messageBox, float width, float height, float depth) {
     	
-        this.width = width;
+        super(messageBox);
+    	
+    	this.width = width;
         
         this.height = height;
         
@@ -82,7 +81,7 @@ public class Cuboid extends Shape{
     @Override
     public float surfaceArea() {
     	
-    	//returns surface area of cuboid
+    	//returns surface area of cube
         return 2 * (getDepth()*getWidth() + getWidth()*getHeight() + getHeight()*getDepth());
         
     }
@@ -90,7 +89,7 @@ public class Cuboid extends Shape{
     @Override
     public float volume() {
     	
-    	//returns volume of cuboid
+    	//returns volume of cube
         return getDepth() * getHeight() * getWidth();
         
     }

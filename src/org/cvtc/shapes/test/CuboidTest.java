@@ -3,18 +3,21 @@ package org.cvtc.shapes.test;
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 import static org.hamcrest.CoreMatchers.*;
-import org.junit.Assert;
 import org.junit.Test;
 import org.cvtc.shapes.*;
 
 
-public class CuboidTest {
+public class CuboidTest extends Shape implements Renderer {
 	
-	Cuboid cube1 = new Cuboid(1.0f, 1.0f, 1.0f);
+	public CuboidTest(Dialog messageBox, float height, float width, float depth) {
+		super(messageBox);
+	}
+
+	Cuboid cube1 = new Cuboid(null, 1.0f, 1.0f, 1.0f);
 	
-	Cuboid cube2 = new Cuboid(2.0f, 2.0f, 2.0f);
+	Cuboid cube2 = new Cuboid(null, 2.0f, 2.0f, 2.0f);
 	
-	Cuboid cube3 = new Cuboid(3.0f, 3.0f, 3.0f);
+	Cuboid cube3 = new Cuboid(null, 3.0f, 3.0f, 3.0f);
 
 	@Test
 	public void testSurfaceArea() {
@@ -150,6 +153,24 @@ public class CuboidTest {
 	public void depthIsNotZero() {
 		
 		assertThat(cube1.getDepth(), is(1.0f));
+		
+	}
+
+	@Override
+	public float surfaceArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float volume() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
 		
 	}
     

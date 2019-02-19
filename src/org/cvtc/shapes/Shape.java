@@ -2,7 +2,21 @@
 package org.cvtc.shapes;
 
 public abstract class Shape {
-
+	
+	public Dialog messageBox;
+	
+	public Shape(Dialog messageBox) {
+		
+		this.messageBox = messageBox;
+		
+	}
+	
+	public void setMessageBox (Dialog messageBox){
+		
+		this.messageBox = messageBox;
+		
+	}
+	
 	public abstract float surfaceArea();
 	
 	public abstract float volume();

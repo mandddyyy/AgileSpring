@@ -3,21 +3,25 @@ package org.cvtc.shapes.test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import org.cvtc.shapes.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CylinderTest {
+public class CylinderTest extends Shape implements Renderer {
 	
-	Cylinder cylinder1 = new Cylinder(1.0f, 1.0f);
+	public CylinderTest(Dialog messageBoxSub, float height, float radius) {
+		super(messageBoxSub);
+
+	}
+
+	Cylinder cylinder1 = new Cylinder(messageBox, 1.0f, 1.0f);
 	
-	Cylinder cylinder2 = new Cylinder(2.0f, 2.0f);
+	Cylinder cylinder2 = new Cylinder(messageBox, 2.0f, 2.0f);
 
-	Cylinder cylinder3 = new Cylinder(3.0f, 3.0f);
-
-
+	Cylinder cylinder3 = new Cylinder(messageBox, 3.0f, 3.0f);
+	
+	
 	@Test
 	public void testRadius() {
 		
@@ -130,7 +134,22 @@ public class CylinderTest {
 		
 	}
 
+	@Override
+	public float surfaceArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
-	
+	@Override
+	public float volume() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

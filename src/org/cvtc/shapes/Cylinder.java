@@ -7,7 +7,7 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 //class is public - extends the class of Shape
-public class Cylinder extends Shape {
+public class Cylinder extends Shape implements Renderer {
 
     //sets cylinder properties as private float
     private float radius;
@@ -15,18 +15,20 @@ public class Cylinder extends Shape {
     private float height;
     
     //Constructor
-    public Cylinder(){
+    //public Cylinder(){
     	
-        this.radius = 0.0f;
+       // this.radius = 0.0f;
         
-        this.height = 0.0f;
+        //this.height = 0.0f;
         
-    }
+    //}
 
     // Overload Constructor
-    public Cylinder(float radius, float height) {
+    public Cylinder(Dialog messageBox, float radius, float height) {
     	
-        this.radius = radius;
+        super(messageBox);
+    	
+    	this.radius = radius;
         
         this.height = height;
         

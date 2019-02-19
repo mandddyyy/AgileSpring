@@ -5,20 +5,22 @@ package org.cvtc.shapes;
 import javax.swing.JOptionPane;
 
 //class is public - extends the class of Shape
-public class Sphere extends Shape{
+public class Sphere extends Shape implements Renderer{
 
     //Sets sphere as private float
     private float radius;
 
     //Constructor
-    public Sphere(){
+    //public Sphere(){
     	
-        this.radius = 0.0f;
+        //this.radius = 0.0f;
         
-    }
+    //}
 
     // Overload Constructor
-    public Sphere(float radius) {
+    public Sphere(Dialog messageBox, float radius) {
+    	
+        super(messageBox);
     	
         this.radius = radius;
         
