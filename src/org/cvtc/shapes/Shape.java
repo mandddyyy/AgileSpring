@@ -23,5 +23,10 @@ public abstract class Shape {
 	
 	public abstract void render();
 
+	public void draw() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 
